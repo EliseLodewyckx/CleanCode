@@ -15,6 +15,13 @@ public class CustomerRepositoryTest {
     Customer cus2 = new Customer("Stijn", new LoyaltyCard("456", 2));
     Customer cus3 = new Customer("Paulien", new LoyaltyCard("789", 9));
 
+    @Before
+    public void fillCustomerRepoWithCustomers(){
+        customerRepo.addCustomer(cus1);
+        customerRepo.addCustomer(cus2);
+        customerRepo.addCustomer(cus3);
+    }
+
     @Test
     public void addCustomerToRepositoryTest(){
         CustomerRepository repoForThisTest = new CustomerRepository();
@@ -26,12 +33,7 @@ public class CustomerRepositoryTest {
         Assertions.assertThat(repoForThisTest.getCustomers()).isEqualTo(customerTestList);
     }
 
-    @Before
-    public void fillCustomerRepoWithCustomers(){
-        customerRepo.addCustomer(cus1);
-        customerRepo.addCustomer(cus2);
-        customerRepo.addCustomer(cus3);
-    }
+
 
     @Test
     public void findCustomerByBarcodeLoyaltyCardTest(){
