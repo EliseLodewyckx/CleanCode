@@ -39,4 +39,7 @@ public class Customer {
             groceryHistory.put(date, shoppingCart);
         }
     }
+    public String getBarcode(){
+        return  loyaltyCard.getBarcode();
+    }
 }

@@ -10,21 +10,18 @@ public class CustomerRepository {
         return customers;
     }
 
-    public void addCustomer(Customer cus){
-            customers.add(cus);
+    public void addCustomer(Customer customer){
+            customers.add(customer);
     }
 
     public Customer findCustomerByBarcode(String barcode) throws Exception {
 
-        for (Customer cus : customers) {
-            if(getBarcode(cus).equals(barcode)){
-                return cus;
+        for (Customer customer : customers) {
+            if(customer.getBarcode().equals(barcode)){
+                return customer;
             }
         }
         throw new Exception("No customer found");
     }
 
-    private String getBarcode(Customer cus) {
-        return cus.getLoyaltyCard().getBarcode();
-    }
 }
