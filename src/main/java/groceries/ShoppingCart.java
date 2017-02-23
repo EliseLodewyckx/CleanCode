@@ -6,13 +6,13 @@ import java.util.Map;
 
 public class ShoppingCart {
 
-    private Map<String, Integer> shoppingCart;
+    private Map<Product, Integer> shoppingCart;
 
     public ShoppingCart() {
         this.shoppingCart = new HashMap<>();
     }
 
-    public void addItemToCart(String item, Integer quantity) {
+    public void addItemToCart(Product item, Integer quantity) {
         if (shoppingCart.containsKey(item)) {
             int temp = shoppingCart.get(item);
             shoppingCart.put(item, temp + quantity);
@@ -21,7 +21,7 @@ public class ShoppingCart {
         }
     }
 
-    public Map<String, Integer> getShoppingCart() {
+    public Map<Product, Integer> getShoppingCart() {
         return shoppingCart;
     }
 }

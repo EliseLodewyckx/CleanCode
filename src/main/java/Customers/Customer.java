@@ -1,6 +1,7 @@
 package customers;
 
 import cards.LoyaltyCard;
+import groceries.Product;
 import groceries.ShoppingCart;
 
 import java.time.LocalDate;
@@ -24,6 +25,10 @@ public class Customer {
         this.groceryHistory = new HashMap<>();
     }
 
+    public String getBarcode(){
+        return  loyaltyCard.getBarcode();
+    }
+
     public String getCustomerName() {
         return customerName;
     }
@@ -39,7 +44,6 @@ public class Customer {
             groceryHistory.put(date, shoppingCart);
         }
     }
-    public String getBarcode(){
-        return  loyaltyCard.getBarcode();
-    }
+
+
 }
