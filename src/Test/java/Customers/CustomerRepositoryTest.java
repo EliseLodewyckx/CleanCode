@@ -3,7 +3,9 @@ package Customers;
 import Cards.LoyaltyCard;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,9 @@ public class CustomerRepositoryTest {
     Customer cus1 = new Customer("Elise", new LoyaltyCard("123", 5));
     Customer cus2 = new Customer("Stijn", new LoyaltyCard("456", 2));
     Customer cus3 = new Customer("Paulien", new LoyaltyCard("789", 9));
+
+    @Rule
+    public ExpectedException expectedException = ExpectedException.none();
 
     @Before
     public void fillCustomerRepoWithCustomers(){
@@ -36,7 +41,7 @@ public class CustomerRepositoryTest {
 
 
     @Test
-    public void findCustomerByBarcodeLoyaltyCardTest(){
+    public void findCustomerByBarcodeLoyaltyCardTest() throws Exception {
         Assertions.assertThat(customerRepo.findCustomerByBarcode("456")).isEqualTo(cus2);
     }
 

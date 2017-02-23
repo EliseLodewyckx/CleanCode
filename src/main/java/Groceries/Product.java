@@ -13,4 +13,11 @@ public class Product {
         this.price = price;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }
