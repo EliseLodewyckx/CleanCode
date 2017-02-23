@@ -1,7 +1,7 @@
 package customers;
 
 import cards.LoyaltyCard;
-import groceries.GroceriesRepository;
+import groceries.ShoppingCart;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -11,7 +11,7 @@ public class Customer {
 
     String customerName;
     LoyaltyCard loyaltyCard;
-    private Map<LocalDate, GroceriesRepository> groceryHistory;
+    private Map<LocalDate, ShoppingCart> groceryHistory;
 
     public Customer(String customerName) {
         this.customerName = customerName;
@@ -32,11 +32,11 @@ public class Customer {
         return loyaltyCard;
     }
 
-    public void addGrocery(LocalDate date, GroceriesRepository grocery) throws Exception {
+    public void addCartToHistory(LocalDate date, ShoppingCart shoppingCart) throws Exception {
         if (groceryHistory.containsKey(date)) {
             throw new Exception("Not allowed to go shopping multiple times a day");
         } else {
-            groceryHistory.put(date, grocery);
+            groceryHistory.put(date, shoppingCart);
         }
     }
 }

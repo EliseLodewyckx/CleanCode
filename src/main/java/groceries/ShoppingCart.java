@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class GroceriesRepository {
+public class ShoppingCart {
 
     private Map<String, Integer> shoppingCart;
 
-    public GroceriesRepository() {
+    public ShoppingCart() {
         this.shoppingCart = new HashMap<>();
     }
 
