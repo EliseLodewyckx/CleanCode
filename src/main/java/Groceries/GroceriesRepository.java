@@ -1,20 +1,29 @@
 package Groceries;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class GroceriesRepository {
 
-    List<Product> repository = new ArrayList<>();
+    private Map<String, Integer> shoppingCart;
 
-    public void addProduct(Product product) {
-        if(product != null){
-            repository.add(product);
+    public GroceriesRepository() {
+        this.shoppingCart = new HashMap<>();
+    }
+
+    public void addItemToCart(String item, Integer quantity) {
+        if (shoppingCart.containsKey(item)) {
+            int temp = shoppingCart.get(item);
+            shoppingCart.put(item, temp + quantity);
+        } else {
+            shoppingCart.put(item, quantity);
         }
     }
 
-    public List<Product> getAllGroceries() {
-        return repository;
+    public Map<String, Integer> getShoppingCart() {
+        return shoppingCart;
     }
 }

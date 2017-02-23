@@ -2,18 +2,18 @@ package Cards;
 
 public class LoyaltyCard {
     String barcode;
-    int bonuspoints;
+    int bonusPoints;
 
-    public LoyaltyCard(String barcode, int bonuspoints) {
+    public LoyaltyCard(String barcode, int bonusPoints) {
         this.barcode = barcode;
-        this.bonuspoints = bonuspoints;
+        this.bonusPoints = bonusPoints;
     }
 
     public String getBarcode() {
         return barcode;
     }
 
-    public int getBonuspoints() {
-        return bonuspoints;
+    public int getBonusPoints() {
+        return bonusPoints;
     }
 }

@@ -5,18 +5,12 @@ package Groceries;
  */
 public class Product {
 
-    public String description;
-    public  double price;
-
-    public Product(){
-        description = "generic product";
-        price = 0.0;
-    }
+    private String description;
+    private double price;
 
     public Product(String description, double price){
         this.description = description;
         this.price = price;
-
     }
 
 }
