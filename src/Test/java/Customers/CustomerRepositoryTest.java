@@ -45,5 +45,10 @@ public class CustomerRepositoryTest {
         Assertions.assertThat(customerRepo.findCustomerByBarcode("456")).isEqualTo(cus2);
     }
 
+    @Test
+    public void searchingForNonExistingCustomer_ThrowsException() throws Exception {
+        
+    }
+
 
 }
