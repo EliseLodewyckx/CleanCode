@@ -1,6 +1,6 @@
-package Customers;
+package customers;
 
-import Cards.LoyaltyCard;
+import cards.LoyaltyCard;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Rule;

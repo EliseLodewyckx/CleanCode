@@ -1,7 +1,7 @@
-package Customers;
+package customers;
 
-import Cards.LoyaltyCard;
-import Groceries.GroceriesRepository;
+import cards.LoyaltyCard;
+import groceries.GroceriesRepository;
 
 import java.time.LocalDate;
 import java.util.HashMap;

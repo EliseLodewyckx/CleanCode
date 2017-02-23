@@ -1,4 +1,4 @@
-package Groceries;
+package groceries;
 
 import java.util.HashMap;
 import java.util.Map;

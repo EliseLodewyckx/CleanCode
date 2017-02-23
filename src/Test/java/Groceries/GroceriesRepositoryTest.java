@@ -1,4 +1,4 @@
-package Groceries;
+package groceries;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
