@@ -16,6 +16,7 @@ public class CustomerRepository {
 
     public Customer findCustomerByBarcode(String barcode) {
         Customer customerToReturn = null;
+
         for (Customer cus : customers) {
             String barcodeCustomer = cus.getLoyaltyCard().getBarcode();
             if(barcodeCustomer.equals(barcode)){
