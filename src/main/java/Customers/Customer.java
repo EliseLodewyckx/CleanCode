@@ -16,4 +16,11 @@ public class Customer {
         this.loyaltyCard = loyaltyCard;
     }
 
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public LoyaltyCard getLoyaltyCard() {
+        return loyaltyCard;
+    }
 }
